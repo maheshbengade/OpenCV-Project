@@ -4,7 +4,7 @@ import numpy as np
 import pytesseract
 from PIL import Image
 
-pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"
+pytesseract.pytesseract.tesseract_cmd = "/usr/bin/tesseract"  ## this line for auto install in vs code manual file
 st.set_page_config(page_title="Document Scanner", layout="wide")
 
 st.title("📄 Smart Document Scanner + OCR")

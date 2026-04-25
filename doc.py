@@ -1,4 +1,14 @@
+import sys
 import streamlit as st
+
+st.write("Python version:", sys.version)
+
+try:
+    import cv2
+    st.success("cv2 imported successfully")
+except Exception as e:
+    st.error(f"cv2 error: {e}")
+    st.stop()import streamlit as st
 import cv2
 import numpy as np
 import pytesseract

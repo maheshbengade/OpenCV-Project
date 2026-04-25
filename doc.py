@@ -3,6 +3,15 @@ import cv2
 import numpy as np
 import pytesseract
 from PIL import Image
+import pytesseract
+import streamlit as st
+
+try:
+    version = pytesseract.get_tesseract_version()
+    st.success(f"Tesseract working: {version}")
+except:
+    st.error("Tesseract NOT found")
+    st.stop()
 pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tesseract.exe"
 st.set_page_config(page_title="Document Scanner", layout="wide")
 
